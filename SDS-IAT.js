@@ -14,7 +14,7 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
       },
       stimulusMedia: [
         //Stimuli content as PIP's media objects
-        { image: "black1.jpg" },
+        { word: "Ashley" },
         { image: "black2.jpg" },
         { image: "black3.jpg" },
         { image: "black4.jpg" },
