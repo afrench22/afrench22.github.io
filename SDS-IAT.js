@@ -1,45 +1,48 @@
-define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
+efine(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
-	return iatExtension({
-		category1 : {
-			name : 'Ashley', //Will appear in the data.
-			title : {
-				media : {word : 'Ashley'}, //Name of the category presented in the task.
-				css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
-				height : 4 //Used to position the "Or" in the combined block.
-			}, 
-			stimulusMedia : [ //Stimuli content as PIP's media objects
-    		    {image : 'black1.jpg'}, 
-    			{image : 'black2.jpg'}, 
-    			{image : 'black3.jpg'}, 
-    			{image : 'black4.jpg'}, 
-    			{image : 'black5.jpg'}, 
-    			{image : 'black6.jpg'}
-			], 
-			//Stimulus css (style)
-			stimulusCss : {color:'#31940F','font-size':'1.8em'}
-		},	
-		category2 :	{
-			name : 'White people', //Will appear in the data.
-			title : {
-				media : {word : 'French'}, //Name of the category presented in the task.
-				css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
-				height : 4 //Used to position the "Or" in the combined block.
-			}, 
-			stimulusMedia : [ //Stimuli content as PIP's media objects
-    		    {image : 'yf1.jpg'}, 
-    			{image : 'yf4.jpg'}, 
-    			{image : 'yf5.jpg'}, 
-    			{image : 'ym2.jpg'}, 
-    			{image : 'ym3.jpg'}, 
-    			{image : 'ym5.jpg'}			], 
-			//Stimulus css
-			stimulusCss : {color:'#31940F','font-size':'1.8em'}
-		},	
-
-		base_url : {//Where are your images at?
-			image : 'https://baranan.github.io/minno-tasks/images/'
-		} 
-	});
-});
+    return iatExtension({
+        category1: {
+            name: 'Attribute practice',
+            title: {
+                media: { word: 'Attribute practice' },
+                css: { color: '#31940F', 'font-size': '2em' },
+                height: 4
+            },
+            stimulusMedia: [
+                { word: 'Ashley' },
+                { word: 'Makayla' },
+                { word: 'Grace' },
+                // ... add all attribute practice words
+            ],
+            stimulusCss: { color: '#31940F', 'font-size': '1.8em' }
+        },
+        category2: {
+            name: 'Practice',
+            title: {
+                media: { word: 'Practice' },
+                css: { color: '#31940F', 'font-size': '2em' },
+                height: 4
+            },
+            stimulusMedia: [
+                { word: 'Fuck Boy' },
+                { word: 'Bitch Boy' },
+                { word: 'Daddy' },
+                // ... add all practice words
+            ],
+            stimulusCss: { color: '#31940F', 'font-size': '1.8em' }
+        },
+        category3: {
+            name: 'Test',
+            title: {
+                media: { word: 'Test' },
+                css: { color: '#31940F', 'font-size': '2em' },
+                height: 4
+            },
+            stimulusMedia: [
+                { word: 'Flowers' },
+                { word: 'Love' },
+                { word: 'Money' },
+                // ... add all test words
+            ],
+            stimulusCss: { color: '#31940F', 'font-size': '1.8em' }
