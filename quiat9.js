@@ -71,9 +71,10 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
       },
       attribute1: {
-        name: "Bad words",
+        name: "Sexually Active", "Male"
         title: {
-          media: { word: "Bad words" },
+          media: { word: "Sexually Active" },
+	  media: { word: "Male" },
           css: { color: "#0000FF", "font-size": "1.8em" },
           height: 4, //Used to position the "Or" in the combined block.
         },
