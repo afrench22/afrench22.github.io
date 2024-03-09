@@ -6,20 +6,20 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 
   return iatExtension({
     category1: {
-      name: "SEXUALLY ACTIVE", //Will appear in the data.
+      name: "Sexually Active", //Will appear in the data.
       title: {
-        media: { word: "SEXUALLY ACTIVE" }, //Name of the category presented in the task.
+        media: { word: "Sexually Active" }, //Name of the category presented in the task.
         css: { color: "#31940F", "font-size": "2em" }, //Style of the category title.
         height: 4, //Used to position the "Or" in the combined block.
       },
       stimulusMedia: [
         //Stimuli content as PIP's media objects
-        { word: "male" },
-        { word: "male" },
-        { word: "male" },
-        { word: "male" },
-        { word: "male" },
-        { word: "male" },
+        { word: "Male" },
+        { word: "Male" },
+        { word: "Male" },
+        { word: "Male" },
+        { word: "Male" },
+        { word: "Male" },
       ],
       //Stimulus css (style)
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
@@ -33,12 +33,12 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
       },
       stimulusMedia: [
         //Stimuli content as PIP's media objects
-        { word: "female" },
-        { word: "female" },
-        { word: "female" },
-        { word: "female" },
-        { word: "female" },
-        { word: "female" },
+        { word: "Female" },
+        { word: "Female" },
+        { word: "Female" },
+        { word: "Female" },
+        { word: "Female" },
+        { word: "Female" },
       ],
       //Stimulus css
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
