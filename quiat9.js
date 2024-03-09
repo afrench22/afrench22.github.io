@@ -71,22 +71,22 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
       },
       attribute1: {
-        name: "Sexually Active",
+        name: "Sexually Active", "Male",
         title: {
-          media: { word: "Bad Words" },
+          media: { word: "Sexually Active" },
 	  css: { color: "#0000FF", "font-size": "1.8em" },
           height: 4, //Used to position the "Or" in the combined block.
         },
         stimulusMedia: [
           //Stimuli content as PIP's media objects
-          { word: "awful" },
-          { word: "failure" },
-          { word: "agony" },
-          { word: "hurt" },
-          { word: "horrible" },
-          { word: "terrible" },
-          { word: "nasty" },
-          { word: "evil" },
+          { word: "Male" },
+          { word: "Male" },
+          { word: "Male" },
+          { word: "Male" },
+          { word: "Male" },
+          { word: "Male" },
+          { word: "Male" },
+          { word: "Male" },
         ],
         //Stimulus css
         stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
