@@ -1,9 +1,7 @@
-@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://github.com/afrench22/afrench22.github.io.git'], function(APIConstructor, iatExtension){
+
 define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
 
-	return iatExtension({
 	return iatExtension({
 		category1 : {
 			name : 'Black people', //Will appear in the data.
@@ -46,4 +44,3 @@ define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/IAT/qualt
 		} 
 	});
 });
-
