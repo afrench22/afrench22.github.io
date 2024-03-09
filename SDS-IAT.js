@@ -46,7 +46,7 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 
     base_url: {
       //Where are your images at?
-      image: "https://baranan.github.io/minno-tasks/images/",
+      image: "https://afrench22.github.io/images/",
     },
   });
 });
