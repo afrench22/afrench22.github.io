@@ -33,9 +33,9 @@ define(["pipAPI", "pipScorer", "underscore"], function (
       },
       //When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
       category1: {
-        name: "Sexually Active", //Will appear in the data and in the default feedback message.
+        name: "Male", //Will appear in the data and in the default feedback message.
         title: {
-          media: { word: "Sexually Active" }, //Name of the category presented in the task.
+          media: { word: "Male" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
@@ -52,15 +52,15 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 	  { word: "Spicy" },
 	  { word: "Explicit" },
 	  { word: "Lustful" },
-	  { word: "Raunchy" },
+	  { word: "Raunchy" }
         ],
         //Stimulus css (style)
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
       },
       category2: {
-        name: "Sexually Passive", //Will appear in the data and in the default feedback message.
+        name: "Female", //Will appear in the data and in the default feedback message.
         title: {
-          media: { word: "Sexually Passive" }, //Name of the category presented in the task.
+          media: { word: "Female" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
@@ -71,15 +71,15 @@ define(["pipAPI", "pipScorer", "underscore"], function (
           { word: "Reserved" },
           { word: "Modest" },
           { word: "Prude" },
-          { word: "Pure" },
+          { word: "Pure" }
         ],
         //Stimulus css
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
       },
-	attribute1: {
-         name: "Male", //Will appear in the data and in the default feedback message.
+	attribute2: {
+         name: "Sexually Passive", //Will appear in the data and in the default feedback message.
          title: {
-          media: { word: "Male" }, //Name of the category presented in the task.
+          media: { word: "Sexually Passive" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
@@ -100,10 +100,10 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         //Stimulus css (style)
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
 	},		
-	attribute2: {
-         name: "Female", //Will appear in the data and in the default feedback message.
+	attribute1: {
+         name: "Sexually Active", //Will appear in the data and in the default feedback message.
          title: {
-          media: { word: "Female" }, //Name of the category presented in the task.
+          media: { word: "Sexually Active" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
@@ -120,34 +120,10 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 	  { word: "Lauren" },
 	  { word: "Alyssa" },
 	  { word: "Kayla" },
-	  { word: "Abigail" },
+	  { word: "Abigail" }
         ],
         //Stimulus css (style)
-        stimulusCss: { color: "#336600", "font-size": "2.3em" },
-      attribute1: {
-        name: "Sexually Active",
-        title: {
-          media: { word: "Sexually Active" },
-	  css: { color: "#0000FF", "font-size": "1.8em" },
-          height: 4, //Used to position the "Or" in the combined block.
-        },
-        stimulusMedia: [
-          //Stimuli content as PIP's media objects
-          { word: "Female" },
-          { word: "Emily" },
-          { word: "Hannah" },
-          { word: "Madison" },
-          { word: "Ashley" },
-          { word: "Sarah" },
-          { word: "Alexis" },
-          { word: "Samantha" },
-	  { word: "Elizabeth" },
-	  { word: "Lauren" }, 
-	  { word: "Alyssa" },
-	  { word: "Kayla" },
-        ],
-        //Stimulus css
-        stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
+        stimulusCss: { color: "#336600", "font-size": "2.3em" }
       },
       base_url: {
         //Where are your images at?
@@ -164,7 +140,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
       blockCategories_nMiniBlocks: 5,
       blockFirstCombined_nTrials: 20,
       blockFirstCombined_nMiniBlocks: 5,
-      blockSecondCombined_nTrials: 0, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
+      blockSecondCombined_nTrials: 40, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
       blockSecondCombined_nMiniBlocks: 10,
       blockSwitch_nTrials: 28,
       blockSwitch_nMiniBlocks: 7,
