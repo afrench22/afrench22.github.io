@@ -76,7 +76,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         //Stimulus css
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
       },
-	category3: {
+	attribute1: {
          name: "Male", //Will appear in the data and in the default feedback message.
          title: {
           media: { word: "Male" }, //Name of the category presented in the task.
@@ -100,7 +100,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         //Stimulus css (style)
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
 	},		
-	category4: {
+	attribute2: {
          name: "Female", //Will appear in the data and in the default feedback message.
          title: {
           media: { word: "Female" }, //Name of the category presented in the task.
@@ -149,28 +149,6 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         //Stimulus css
         stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
       },
-      attribute2: {
-        name: "Sexually Passive",
-        title: {
-          media: { word: "Sexually Passive"},
-          css: { color: "#0000FF", "font-size": "1.8em" },
-          height: 4, //Used to position the "Or" in the combined block.
-        },
-        stimulusMedia: [
-          //Stimuli content as PIP's media objects
-          { word: "laughter" },
-          { word: "happy" },
-          { word: "glorious" },
-          { word: "joy" },
-          { word: "wonderful" },
-          { word: "peace" },
-          { word: "pleasure" },
-          { word: "love" },
-        ],
-        //Stimulus css
-        stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
-      },
-
       base_url: {
         //Where are your images at?
         image: "/implicit/user/yba/pipexample/biat/images/",
@@ -186,7 +164,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
       blockCategories_nMiniBlocks: 5,
       blockFirstCombined_nTrials: 20,
       blockFirstCombined_nMiniBlocks: 5,
-      blockSecondCombined_nTrials: 40, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
+      blockSecondCombined_nTrials: 0, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
       blockSecondCombined_nMiniBlocks: 10,
       blockSwitch_nTrials: 28,
       blockSwitch_nMiniBlocks: 7,
