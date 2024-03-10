@@ -33,9 +33,9 @@ define(["pipAPI", "pipScorer", "underscore"], function (
       },
       //When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
       category1: {
-        name: "Male", //Will appear in the data and in the default feedback message.
+        name: "Sexually Active", //Will appear in the data and in the default feedback message.
         title: {
-          media: { word: "Male" }, //Name of the category presented in the task.
+          media: { word: "Sexually Active" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
@@ -58,9 +58,9 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
       },
       category2: {
-        name: "Female", //Will appear in the data and in the default feedback message.
+        name: "Sexually Passive", //Will appear in the data and in the default feedback message.
         title: {
-          media: { word: "Female" }, //Name of the category presented in the task.
+          media: { word: "Sexually Passive" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
@@ -77,9 +77,9 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
       },
 	attribute2: {
-         name: "Sexually Passive", //Will appear in the data and in the default feedback message.
+         name: "Female", //Will appear in the data and in the default feedback message.
          title: {
-          media: { word: "Sexually Passive" }, //Name of the category presented in the task.
+          media: { word: "Female" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
@@ -101,9 +101,9 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
 	},		
 	attribute1: {
-         name: "Sexually Active", //Will appear in the data and in the default feedback message.
+         name: "Male", //Will appear in the data and in the default feedback message.
          title: {
-          media: { word: "Sexually Active" }, //Name of the category presented in the task.
+          media: { word: "Male" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
