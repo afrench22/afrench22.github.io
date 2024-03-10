@@ -92,7 +92,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
       },
       attribute2: {
-        name: "Good words",
+        name: "Male",
         title: {
           media: { word: "Good words" },
           css: { color: "#0000FF", "font-size": "1.8em" },
