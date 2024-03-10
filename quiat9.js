@@ -94,7 +94,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
       attribute2: {
         name: "Male",
         title: {
-          media: { word: "Good words"},
+          media: { word: "Sexually Passive"},
           css: { color: "#0000FF", "font-size": "1.8em" },
           height: 4, //Used to position the "Or" in the combined block.
         },
