@@ -41,7 +41,50 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         },
         stimulusMedia: [
           //Stimuli content as PIP's media objects
-          { word: "Sexually Active" },
+          { word: "Promiscious" },
+          { word: "Dominant" },
+          { word: "Seducer" },
+          { word: "Daring" },
+          { word: "Arroused" },
+          { word: "Horny" },
+	  { word: "Errotic" },
+	  { word: "Vulgar" },
+	  { word: "Spicy" },
+	  { word: "Explicit" },
+	  { word: "Lustful" },
+	  { word: "Raunchy" },
+        ],
+        //Stimulus css (style)
+        stimulusCss: { color: "#336600", "font-size": "2.3em" },
+      },
+      category2: {
+        name: "Sexually Passive", //Will appear in the data and in the default feedback message.
+        title: {
+          media: { word: "Sexually Passive" }, //Name of the category presented in the task.
+          css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
+          height: 4, //Used to position the "Or" in the combined block.
+        },
+        stimulusMedia: [
+          //Stimuli content as PIP's media objects
+          { word: "Submissive" },
+          { word: "Innocent" },
+          { word: "Reserved" },
+          { word: "Modest" },
+          { word: "Prude" },
+          { word: "Pure" },
+        ],
+        //Stimulus css
+        stimulusCss: { color: "#336600", "font-size": "2.3em" },
+      },
+	category3: {
+         name: "Male", //Will appear in the data and in the default feedback message.
+         title: {
+          media: { word: "Male" }, //Name of the category presented in the task.
+          css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
+          height: 4, //Used to position the "Or" in the combined block.
+        },
+        stimulusMedia: [
+          //Stimuli content as PIP's media objects
           { word: "Jacob" },
           { word: "Michael" },
           { word: "Josh" },
@@ -56,26 +99,31 @@ define(["pipAPI", "pipScorer", "underscore"], function (
         ],
         //Stimulus css (style)
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
-      },
-      category2: {
-        name: "White people", //Will appear in the data and in the default feedback message.
-        title: {
-          media: { word: "White people" }, //Name of the category presented in the task.
+	},		
+	category4: {
+         name: "Female", //Will appear in the data and in the default feedback message.
+         title: {
+          media: { word: "Female" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
         stimulusMedia: [
           //Stimuli content as PIP's media objects
-          { word: "Jake" },
-          { word: "Connor" },
-          { word: "Bradley" },
-          { word: "Allison" },
-          { word: "Emma" },
           { word: "Emily" },
+          { word: "Hannah" },
+          { word: "Madison" },
+          { word: "Ashley" },
+          { word: "Sarah" },
+          { word: "Alexis" },
+	  { word: "Samantha" },
+	  { word: "Elizabeth" },
+	  { word: "Lauren" },
+	  { word: "Alyssa" },
+	  { word: "Kayla" },
+	  { word: "Abigail" },
         ],
-        //Stimulus css
+        //Stimulus css (style)
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
-      },
       attribute1: {
         name: "Sexually Active",
         title: {
