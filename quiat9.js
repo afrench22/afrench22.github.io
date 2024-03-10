@@ -33,20 +33,26 @@ define(["pipAPI", "pipScorer", "underscore"], function (
       },
       //When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
       category1: {
-        name: "Black people", //Will appear in the data and in the default feedback message.
+        name: "Sexually Active", //Will appear in the data and in the default feedback message.
         title: {
-          media: { word: "Black people" }, //Name of the category presented in the task.
+          media: { word: "Sexually Active" }, //Name of the category presented in the task.
           css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
           height: 4, //Used to position the "Or" in the combined block.
         },
         stimulusMedia: [
           //Stimuli content as PIP's media objects
-          { word: "Tyron" },
-          { word: "Malik" },
-          { word: "Terrell" },
-          { word: "Jazmin" },
-          { word: "Tiara" },
-          { word: "Shanice" },
+          { word: "Sexually Active" },
+          { word: "Jacob" },
+          { word: "Michael" },
+          { word: "Josh" },
+          { word: "Matthew" },
+          { word: "Chris" },
+	  { word: "Nick" },
+	  { word: "Andrew" },
+	  { word: "Daniel" },
+	  { word: "Tyler" },
+	  { word: "Brandon" },
+	  { word: "Ryan" },
         ],
         //Stimulus css (style)
         stimulusCss: { color: "#336600", "font-size": "2.3em" },
@@ -73,26 +79,30 @@ define(["pipAPI", "pipScorer", "underscore"], function (
       attribute1: {
         name: "Sexually Active",
         title: {
-          media: { word: "Female" },
+          media: { word: "Sexually Active" },
 	  css: { color: "#0000FF", "font-size": "1.8em" },
           height: 4, //Used to position the "Or" in the combined block.
         },
         stimulusMedia: [
           //Stimuli content as PIP's media objects
-          { word: "Male" },
-          { word: "Male" },
-          { word: "Male" },
-          { word: "Male" },
-          { word: "Male" },
-          { word: "Male" },
-          { word: "Male" },
-          { word: "Male" },
+          { word: "Female" },
+          { word: "Emily" },
+          { word: "Hannah" },
+          { word: "Madison" },
+          { word: "Ashley" },
+          { word: "Sarah" },
+          { word: "Alexis" },
+          { word: "Samantha" },
+	  { word: "Elizabeth" },
+	  { word: "Lauren" }, 
+	  { word: "Alyssa" },
+	  { word: "Kayla" },
         ],
         //Stimulus css
         stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
       },
       attribute2: {
-        name: "Male",
+        name: "Sexually Passive",
         title: {
           media: { word: "Sexually Passive"},
           css: { color: "#0000FF", "font-size": "1.8em" },
