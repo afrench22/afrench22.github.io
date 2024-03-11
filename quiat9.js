@@ -1,56 +1,55 @@
 //YBYB:Created from iat8.js, for Qualtrics
-define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
-
-	/**
+define(["pipAPI", "pipScorer", "underscore"], function (
+  APIConstructor,
+  Scorer,
+  _,
+) {
+  /**
 	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Gal
 	 * @param  {Object} options Options that replace the defaults...
 	 * @return {Object}         PIP script
 	**/
+	
+  function iatExtension(options) {
+    var API = new APIConstructor();
+    var scorer = new Scorer();
+    var piCurrent = API.getCurrent();
 
-	function iatExtension(options)
-	{
-		var API = new APIConstructor();		
-		var scorer = new Scorer();
-        var piCurrent = API.getCurrent();
-		
-
-		//Here we set the settings of our task. 
-		//Read the comments to learn what each parameters means.
-		//You can also do that from the outside, with a dedicated jsp file.
-		var iatObj =
-		{
-			fullscreen:false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
-        
-			isTouch:false, //Set whether the task is on a touch device.
-			//Set the canvas of the task
-			canvas : {
-				maxWidth: 725,
-				proportions : 0.7,
-				background: '#ffffff',
-				borderWidth: 5,
-				canvasBackground: '#ffffff',
-				borderColor: 'lightblue'
+	  
+    //Here we set the settings of our task.
+    //Read the comments to learn what each parameters means.
+    //You can also do that from the outside, with a dedicated jsp file.
+    var iatObj = {
+      	    fullscreen: false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
+      
+	    isTouch: false, //Set whether the task is on a touch device.
+      //Set the canvas of the task
+      canvas: {
+        maxWidth: 725,
+        proportions: 0.7,
+        background: "#ffffff",
+        borderWidth: 5,
+        canvasBackground: "#ffffff",
+        borderColor: "lightblue",
 			},
 			//When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
-			category1 : {
-				name : 'Black people', //Will appear in the data and in the default feedback message.
+			category1: {
+				name : 'Male', //Will appear in the data and in the default feedback message.
 				title : {
-					media : {word : 'Black people'}, //Name of the category presented in the task.
+					media : {word : 'Male'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Tyron'},
-					{word: 'Malik'},
-					{word: 'Terrell'},
-					{word: 'Jazmin'},
-					{word: 'Tiara'},
-					{word: 'Shanice'}
+					{word: 'Jacob'},
+					{word: 'Michael'},
+					{word: 'Josh'},
+					{word: 'Nick'}
 				],
 				//Stimulus css (style)
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
 			},
-			category2 :	{
+			category2: {
 				name : 'White people', //Will appear in the data and in the default feedback message.
 				title : {
 					media : {word : 'White people'}, //Name of the category presented in the task.
