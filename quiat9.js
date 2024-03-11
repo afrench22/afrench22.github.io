@@ -1,157 +1,166 @@
-define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) {
-
-	/**
-	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Elad
+//YBYB:Created from iat8.js, for Qualtrics
+define(["pipAPI", "pipScorer", "underscore"], function (
+  APIConstructor,
+  Scorer,
+  _,
+) {
+  /**
+	Created by: Yoav Bar-Anan (baranan@gmail.com). Modified by Gal
 	 * @param  {Object} options Options that replace the defaults...
 	 * @return {Object}         PIP script
 	**/
-
-	function iatExtension(options)
-	{
-		var API = new APIConstructor();		
-		var scorer = new Scorer();
-		var piCurrent = API.getCurrent();
-
-		//Here we set the settings of our task. 
-		//Read the comments to learn what each parameters means.
-		//You can also do that from the outside, with a dedicated jsp file.
-		var iatObj =
-		{
-			isTouch:false, //Set whether the task is on a touch device.
-			//Set the canvas of the task
-			canvas : {
-				maxWidth: 725,
-				proportions : 0.7,
-				background: '#ffffff',
-				borderWidth: 5,
-				canvasBackground: '#ffffff',
-				borderColor: 'lightblue'
-			},
-			category1 : {
-				name : 'Black people', //Will appear in the data and in the default feedback message.
-				title : {
-					media : {word : 'Black people'}, //Name of the category presented in the task.
-					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
-					height : 4 //Used to position the "Or" in the combined block.
-				},
-				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Tyron'},
-					{word: 'Malik'},
-					{word: 'Terrell'},
-					{word: 'Jazmin'},
-					{word: 'Tiara'},
-					{word: 'Shanice'}
-				],
-				//Stimulus css (style)
-				stimulusCss : {color:'#336600','font-size':'2.3em'}
-			},
-			category2 :	{
-				name : 'White people', //Will appear in the data and in the default feedback message.
-				title : {
-					media : {word : 'White people'}, //Name of the category presented in the task.
-					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
-					height : 4 //Used to position the "Or" in the combined block.
-				},
-				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Jake'},
-					{word: 'Connor'},
-					{word: 'Bradley'},
-					{word: 'Allison'},
-					{word: 'Emma'},
-					{word: 'Emily'}
-				],
-				//Stimulus css
-				stimulusCss : {color:'#336600','font-size':'2.3em'}
-			},
-			attribute2 :
-			{
-				name : 'Good words',
-				title : {
-					media : {word : 'Good words'},
-					css : {color:'#0000FF','font-size':'1.8em'},
-					height : 4 //Used to position the "Or" in the combined block.
-				},
-				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'laughter'},
-					{word: 'happy'},
-					{word: 'glorious'},
-					{word: 'joy'},
-					{word: 'wonderful'},
-					{word: 'peace'},
-					{word: 'pleasure'},
-					{word: 'love'}
-				],
-				//Stimulus css
-				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
-			},
-			attribute1 :
-			{
-				name : 'Bad words',
-				title : {
-					media : {word : 'Bad words'},
-					css : {color:'#0000FF','font-size':'1.8em'},
-					height : 4 //Used to position the "Or" in the combined block.
-				},
-				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'awful'},
-					{word: 'failure'},
-					{word: 'agony'},
-					{word: 'hurt'},
-					{word: 'horrible'},
-					{word: 'terrible'},
-					{word: 'nasty'},
-					{word: 'evil'}
-				],
-				//Stimulus css
-				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
-			},
-
-			base_url : {//Where are your images at?
-				image : '/implicit/user/yba/pipexample/biat/images/'
+  function iatExtension(options) {
+    var API = new APIConstructor();
+    var scorer = new Scorer();
+    var piCurrent = API.getCurrent();
+    //Here we set the settings of our task.
+    //Read the comments to learn what each parameters means.
+    //You can also do that from the outside, with a dedicated jsp file.
+    var iatObj = {
+      fullscreen: false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
+      isTouch: false, //Set whether the task is on a touch device.
+      //Set the canvas of the task
+      canvas: {
+        maxWidth: 725,
+        proportions: 0.7,
+        background: "#ffffff",
+        borderWidth: 5,
+        canvasBackground: "#ffffff",
+        borderColor: "lightblue",
       },
-
+      //When scoring, we will consider the compatible condition the pairing condition that requires response with one key to [category1,attribute1] and the other key to [category2,attribute2]
+      category1: {
+        name: "Sexually Active", //Will appear in the data and in the default feedback message.
+        title: {
+          media: { word: "Sexually Active" }, //Name of the category presented in the task.
+          css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
+          height: 4, //Used to position the "Or" in the combined block.
+        },
+        stimulusMedia: [
+          //Stimuli content as PIP's media objects
+          { word: "Promiscious" },
+          { word: "Dominant" },
+          { word: "Seducer" },
+          { word: "Daring" },
+          { word: "Arroused" },
+          { word: "Horny" },
+	  { word: "Errotic" },
+	  { word: "Vulgar" },
+	  { word: "Spicy" },
+	  { word: "Explicit" },
+	  { word: "Lustful" },
+	  { word: "Raunchy" }
+        ],
+        //Stimulus css (style)
+        stimulusCss: { color: "#336600", "font-size": "2.3em" },
+      },
+      category2: {
+        name: "Sexually Passive", //Will appear in the data and in the default feedback message.
+        title: {
+          media: { word: "Sexually Passive" }, //Name of the category presented in the task.
+          css: { color: "#336600", "font-size": "1.8em" }, //Style of the category title.
+          height: 4, //Used to position the "Or" in the combined block.
+        },
+        stimulusMedia: [
+          //Stimuli content as PIP's media objects
+          { word: "Submissive" },
+          { word: "Innocent" },
+          { word: "Reserved" },
+          { word: "Modest" },
+          { word: "Prude" },
+          { word: "Pure" }
+        ],
+        //Stimulus css
+        stimulusCss: { color: "#336600", "font-size": "2.3em" },
+      },
+	attribute2: {
+         name: "Female", //Will appear in the data and in the default feedback message.
+         title: {
+          media: { word: "Female" }, //Name of the category presented in the task.
+          css: { color: "#0000FF", "font-size": "2.3em" }, //Style of the category title.
+          height: 4, //Used to position the "Or" in the combined block.
+        },
+        stimulusMedia: [
+          //Stimuli content as PIP's media objects
+          { word: "Jacob" },
+          { word: "Michael" },
+          { word: "Josh" },
+          { word: "Matthew" },
+          { word: "Chris" },
+	  { word: "Nick" },
+	  { word: "Andrew" },
+	  { word: "Daniel" },
+	  { word: "Tyler" },
+	  { word: "Brandon" },
+	  { word: "Ryan" },
+        ],
+        //Stimulus css (style)
+        stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
+	},		
+	attribute1: {
+         name: "Male", //Will appear in the data and in the default feedback message.
+         title: {
+          media: { word: "Male" }, //Name of the category presented in the task.
+          css: { color: "#0000FF", "font-size": "2.3em" }, //Style of the category title.
+          height: 4, //Used to position the "Or" in the combined block.
+        },
+        stimulusMedia: [
+          //Stimuli content as PIP's media objects
+          { word: "Emily" },
+          { word: "Hannah" },
+          { word: "Madison" },
+          { word: "Ashley" },
+          { word: "Sarah" },
+          { word: "Alexis" },
+	  { word: "Samantha" },
+	  { word: "Elizabeth" },
+	  { word: "Lauren" },
+	  { word: "Alyssa" },
+	  { word: "Kayla" },
+	  { word: "Abigail" }
+        ],
+        //Stimulus css (style)
+        stimulusCss: { color: "#336600", "font-size": "2.3em" }
+      },
+      base_url: {
+        //Where are your images at?
+        image: "/implicit/user/yba/pipexample/biat/images/",
+      },
       //nBlocks : 7, This is not-supported anymore. If you want a 5-block IAT, change blockSecondCombined_nTrials to 0.
-
       ////In each block, we can include a number of mini-blocks, to reduce repetition of same group/response.
       ////If you set the number of trials in any block to 0, that block will be skipped.
       blockAttributes_nTrials: 20,
       blockAttributes_nMiniBlocks: 5,
+      blockCategories_nTrials: 20,
       blockCategories_nTrials: 48,
       blockCategories_nMiniBlocks: 5,
       blockFirstCombined_nTrials: 20,
       blockFirstCombined_nMiniBlocks: 5,
+      blockSecondCombined_nTrials: 40, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
       blockSecondCombined_nTrials: 0, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
       blockSecondCombined_nMiniBlocks: 10,
       blockSwitch_nTrials: 28,
       blockSwitch_nMiniBlocks: 7,
-
       //Should we randomize which attribute is on the right, and which on the left?
       randomAttSide: false, // Accepts 'true' and 'false'. If false, then attribute2 on the right.
-
       //Should we randomize which category is on the right first?
       randomBlockOrder: true, //Accepts 'true' and 'false'. If false, then category1 on the left first.
       //Note: the player sends block3Cond at the end of the task (saved in the explicit table) to inform about the categories in that block.
       //In the block3Cond variable: "att1/cat1,att2/cat2" means att1 and cat1 on the left, att2 and cat2 on the right.
-
       //Show a reminder what to do on error, throughout the task
       remindError: true,
-
       remindErrorText:
         '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
         'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
         "Press the other key to continue.<p/>",
-
       remindErrorTextTouch:
         '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
         'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
         "Touch the other side to continue.<p/>",
-
       errorCorrection: true, //Should participants correct error responses?
       errorFBDuration: 500, //Duration of error feedback display (relevant only when errorCorrection is false)
       ITIDuration: 250, //Duration between trials.
-
       fontColor: "#000000", //The default color used for printed messages.
-
       //Text and style for key instructions displayed about the category labels.
       leftKeyText: 'Press "E" for',
       rightKeyText: 'Press "I" for',
@@ -163,17 +172,13 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       //Text and style for the separator between the top and bottom category labels.
       orText: "or",
       orCss: { "font-size": "1.8em", color: "#000000" },
-
       instWidth: 99, //The width of the instructions stimulus
-
       finalText: "Press space to continue to the next task",
       finalTouchText:
         "Touch the bottom green area to continue to the next task",
-
       touchMaxStimulusWidth: "50%",
       touchMaxStimulusHeight: "50%",
       bottomTouchCss: {}, //Add any CSS value you want for changing the css of the bottom touch area.
-
       //Instructions text.
       // You can use the following variables and they will be replaced by
       // the name of the categories and the block's number variables:
@@ -205,7 +210,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         '<p align="center">Touch the <b>lower </b> green area to start.</p>',
         "</div>",
       ].join("\n"),
-
       instCategoriesPractice:
         '<div><p align="center" style="font-size:20px; font-family:arial">' +
         '<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
@@ -233,7 +237,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         '<p align="center">Touch the <b>lower </b> green area to start.</p>',
         "</div>",
       ].join("\n"),
-
       instFirstCombined:
         '<div><p align="center" style="font-size:20px; font-family:arial">' +
         '<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
@@ -260,7 +263,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         '<p align="center">Touch the <b>lower </b> green area to start.</p>',
         "</div>",
       ].join("\n"),
-
       instSecondCombined:
         '<div><p align="center" style="font-size:20px; font-family:arial">' +
         '<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
@@ -276,7 +278,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         '<p align="center"><u>Part blockNum of nBlocks</u></p>',
         "<br/>",
         "<br/>",
-
         '<p align="left" style="margin-left:5px">',
         'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items and for <font color="#0000ff">leftAttribute</font>.<br/>',
         'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items and for <font color="#0000ff">rightAttribute</font>.<br/>',
@@ -286,7 +287,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         '<p align="center">Touch the <b>lower </b> green area to start.</p>',
         "</div>",
       ].join("\n"),
-
       instSwitchCategories:
         '<div><p align="center" style="font-size:20px; font-family:arial">' +
         '<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
@@ -313,12 +313,10 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         '<p align="center">Touch the <b>lower </b> green area to start.</p>',
         "</div>",
       ].join("\n"),
-
       instThirdCombined: "instFirstCombined", //this means that we're going to use the instFirstCombined property for the third combined block as well. You can change that.
       instFourthCombined: "instSecondCombined", //this means that we're going to use the instSecondCombined property for the fourth combined block as well. You can change that.
       instThirdCombinedTouch: "instFirstCombined", //this means that we're going to use the instFirstCombined property for the third combined block as well. You can change that.
       instFourthCombinedTouch: "instSecondCombined", //this means that we're going to use the instSecondCombined property for the fourth combined block as well. You can change that.
-
       showDebriefing: false, //Show feedback in the last trial? Relevant only in a Qualtrics IAT because in Qualtrics we cannot access the saved feedback and IAT score later in the survey.
       //Texts for the trials that show the debriefing.
       preDebriefingText: "Press space to see your result", //Text in the trial that comes before showing the debriefing.
@@ -343,26 +341,21 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         "Your responses suggested a slight automatic preference for categoryB over categoryA.",
       fb_equal_CatAvsCatB:
         "Your responses suggested no automatic preference between categoryA and categoryB.",
-
       //Error messages in the feedback
       manyErrors: "There were too many errors made to determine a result.",
       tooFast: "There were too many fast trials to determine a result.",
       notEnough: "There were not enough trials to determine a result.",
     };
-
     // extend the "current" object with the default
     _.extend(piCurrent, _.defaults(options, iatObj));
     _.extend(API.script.settings, options.settings);
-
     /**
      **** For Qualtrics
      */
     API.addSettings("onEnd", window.minnoJS.onEnd);
-
     //For debugging the logger
     //window.minnoJS.logger = console.log;
     //window.minnoJS.onEnd = console.log;
-
     API.addSettings("logger", {
       // gather logs in array
       onRow: function (logName, log, settings, ctx) {
@@ -458,10 +451,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           block3Cond, //'bOrd'
         ]);
         //console.log('added');
-
         content.unshift(headers);
         return toCsv(content);
-
         function hasProperties(obj, props) {
           var iProp;
           for (iProp = 0; iProp < props.length; iProp++) {
@@ -490,7 +481,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         window.minnoJS.logger(serialized);
       },
     });
-
     // are we on the touch version
     var isTouch = piCurrent.isTouch;
     var showDebriefing = piCurrent.showDebriefing;
@@ -526,18 +516,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         if (wscript != null) wscript.SendKeys("{F11}");
       }
     }
-
     //Set the attribute on the left.
     var rightAttName = piCurrent.randomAttSide
       ? Math.random() >= 0.5
         ? att1.name
         : att2.name
       : att2.name;
-
     /**
      * Create inputs
      */
-
     var leftInput = !isTouch
       ? { handle: "left", on: "keypressed", key: "e" }
       : { handle: "left", on: "click", stimHandle: "left" };
@@ -547,7 +534,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
     var proceedInput = !isTouch
       ? { handle: "space", on: "space" }
       : { handle: "space", on: "bottomTouch", css: piCurrent.bottomTouchCss };
-
     /**
      *Set basic settings.
      */
@@ -570,7 +556,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         leftInput,
         rightInput,
       ],
-
       // user interactions
       interactions: [
         // begin trial : display stimulus immediately
@@ -634,7 +619,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           conditions: [{ type: "inputEquals", value: "end" }],
           actions: [{ type: "endTrial" }],
         },
-
         // skip block: enter and then ESC
         {
           conditions: [{ type: "inputEquals", value: "skip1" }],
@@ -656,7 +640,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         },
       ],
     });
-
     /**
      * Create default instructions trials
      */
@@ -670,10 +653,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           score: 0,
           block: 0,
         },
-
         // create user interface (just click to move on...)
         input: [proceedInput],
-
         interactions: [
           // display instructions
           {
@@ -697,11 +678,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         ],
       },
     ]);
-
     /**
      * All basic trials.
      */
-
     //Helper function to create a basic trial for a certain category (or attribute)
     //as an in or out trial (right is in and left is out).
     function createBasicTrialSet(params) {
@@ -718,7 +697,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       ];
       return set;
     }
-
     var basicTrialSets = {};
     //Four trials for the attributes.
     basicTrialSets.att1left = createBasicTrialSet({
@@ -754,18 +732,14 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       side: "right",
       stimSet: "cat2",
     });
-
     API.addTrialSets(basicTrialSets);
-
     /**
      *	Stimulus Sets
      */
-
     //Basic stimuli
     API.addStimulusSets({
       // This Default stimulus is inherited by the other stimuli so that we can have a consistent look and change it from one place
       Default: [{ css: { color: piCurrent.fontColor, "font-size": "2em" } }],
-
       instructions: [
         {
           css: { "font-size": "1.4em", color: "black", lineHeight: 1.2 },
@@ -774,7 +748,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           size: { width: piCurrent.instWidth },
         },
       ],
-
       target: [
         {
           data: { handle: "targetStim" },
@@ -822,7 +795,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           nolog: true,
         },
       ],
-
       touchInputStimuli: [
         {
           media: { html: "<div></div>" },
@@ -840,7 +812,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         },
       ],
     });
-
     /**
      *	Media Sets
      */
@@ -850,11 +821,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       cat1: cat1.stimulusMedia,
       cat2: cat2.stimulusMedia,
     });
-
     /**
      *	Create the Task sequence
      */
-
     //helper Function for getting the instructions HTML.
     function getInstFromTemplate(params) {
       //params: instTemplate, blockNum, nBlocks, leftCat, rightCat, leftAtt, rightAtt.
@@ -867,7 +836,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         .replace(/nBlocks/g, params.nBlocks);
       return retText;
     }
-
     //Helper function to create the trial's layout
     function getLayout(params) {
       function buildContent(layout) {
@@ -883,7 +851,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           ? '<img src="' + piCurrent.base_url.image + content + '" />'
           : content;
       }
-
       function buildStyle(css) {
         css || (css = {});
         var style = "";
@@ -892,7 +859,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         }
         return style;
       }
-
       var template =
         "" +
         '   <div style="margin:0 1em; text-align:center"> ' +
@@ -911,7 +877,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         "   		</div>  " +
         "   	<% } %>  " +
         "   </div>  ";
-
       //Attributes are above the categories.
       var layout = [
         {
@@ -949,7 +914,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           },
         },
       ];
-
       if (!params.isInst && params.remindError) {
         layout.push({
           location: { bottom: 1 },
@@ -961,7 +925,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           },
         });
       }
-
       if (!params.isInst && isTouch) {
         layout.push({
           inherit: {
@@ -978,10 +941,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           },
         });
       }
-
       return layout;
     }
-
     //helper function for creating an instructions trial
     function getInstTrial(params) {
       var instParams = { isInst: true };
@@ -1021,10 +982,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           },
         ],
       };
-
       return instTrial;
     }
-
     //Get a mixer for a mini-block in a 2-categories block.
     function getMiniMixer2(params) {
       //{nTrialsInMini : , currentCond : , rightTrial : , leftTrial : , blockNum : , blockLayout : )
@@ -1049,16 +1008,13 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         data: [mixer], //Completely randomize the repeating trials.
       };
     }
-
     //Get a mixer for a mini-block in a 4-categories block.
     function getMiniMixer4(params) {
       //{nTrialsInMini : , currentCond : , cong: , rightTrial1 : , leftTrial1 : , rightTrial2 : , leftTrial2 : , blockNum : , blockLayout : , parcel :)
-
       ////Because of the alternation, we randomize the trial order ourselves.
       var atts = [];
       var cats = [];
       var iTrial;
-
       //Fill
       for (iTrial = 1; iTrial <= params.nTrialsInMini; iTrial += 4) {
         atts.push(1);
@@ -1069,7 +1025,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       //Randomize order
       atts = _.shuffle(atts);
       cats = _.shuffle(cats);
-
       var mixerData = [];
       var iCat = 0;
       var iAtt = 0;
@@ -1097,19 +1052,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         });
         iAtt++;
       }
-
       return {
         mixer: "wrapper",
         data: mixerData,
       };
     }
-
     ////////////////////////////////////////////////////////////////
     ////AFTER ALL the helper functions, it is time to create the trial sequence.
     var trialSequence = [];
-
     var globalObj = piCurrent;
-
     //Count the number of blocks in this task
     var nBlocks =
       (globalObj.blockAttributes_nTrials < 1 ? 0 : 1) +
@@ -1117,7 +1068,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       (globalObj.blockFirstCombined_nTrials < 1 ? 0 : 2) +
       (globalObj.blockSecondCombined_nTrials < 1 ? 0 : 2) +
       (globalObj.blockSwitch_nTrials < 1 ? 0 : 1);
-
     //These parameters are used to create trials.
     var blockParamsAtts = {
       nBlocks: nBlocks,
@@ -1159,11 +1109,9 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
     blockParamsCats.instTemplate = isTouch
       ? globalObj.instCategoriesPracticeTouch
       : globalObj.instCategoriesPractice;
-
     var blockLayout = getLayout(blockParamsCats);
     var nTrialsInMini = blockParamsCats.nTrials / blockParamsCats.nMiniBlocks;
     var iBlock2Mini;
-
     //Add trials, but only if there are trials in this block
     if (blockParamsCats.nTrials > 0) {
       trialSequence.push(getInstTrial(blockParamsCats));
@@ -1185,7 +1133,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       }
       iBlock++;
     }
-
     //////////////////////////////
     ////Block 2: Attributes
     //Set variables related to the sides
@@ -1213,7 +1160,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       isCompatible = COMPATIBLE;
     }
     //console.log('rightAttName='+rightAttName+' rightCatName='+rightCatName+' att1.name='+att1.name+' cat1.name='+cat1.name + 'isCompatible='+isCompatible);
-
     //Number variables
     blockParamsAtts.nMiniBlocks = globalObj.blockAttributes_nMiniBlocks;
     blockParamsAtts.nTrials = globalObj.blockAttributes_nTrials;
@@ -1287,7 +1233,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
     nTrialsInMini =
       blockParamsCombined.nTrials / blockParamsCombined.nMiniBlocks;
     var iBlock3Mini;
-
     if (blockParamsCombined.nTrials > 0) {
       trialSequence.push(getInstTrial(blockParamsCombined));
       for (
@@ -1496,9 +1441,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         );
       }
     }
-
     //////// in this trial the score of the participant is computed//////////////////
-
     trialSequence.push({
       data: { blockStart: true },
       layout: [{ media: { word: "" } }],
@@ -1507,7 +1450,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         piCurrent.feedback = DScoreObj.FBMsg;
         piCurrent.d = DScoreObj.DScore;
       },
-
       interactions: [
         {
           conditions: [{ type: "begin" }],
@@ -1515,7 +1457,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         },
       ],
     });
-
     //if showDebriefing==True, we will show the feedback to the user
     if (showDebriefing) {
       //////////////////////////////
@@ -1535,13 +1476,11 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
           },
         ],
       });
-
       /////////////////////////////
       //add debriefing trial, the feedback will be shown with text above and under ther result.
       trialSequence.push({
         inherit: "instructions",
         data: { blockStart: true },
-
         //the feedback massege will be shown to the user at the center of the screen
         stimuli: [
           {
@@ -1566,7 +1505,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         ],
       });
     }
-
     //////////////////////////////
     //Add final trial
     trialSequence.push({
@@ -1582,10 +1520,8 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         },
       ],
     });
-
     //Add the trials sequence to the API.
     API.addSequence(trialSequence);
-
     /**
      *Compute scores and feedback messages
      **/
@@ -1611,7 +1547,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
         url: "/implicit/scorer",
       },
     });
-
     //Helper function to set the feedback messages.
     function getFB(inText, categoryA, categoryB) {
       var retText = inText.replace(/attribute1/g, att1.name);
@@ -1620,7 +1555,6 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
       retText = retText.replace(/categoryB/g, categoryB);
       return retText;
     }
-
     //Set the feedback messages.
     var messageDef = [
       {
@@ -1688,9 +1622,7 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
     }
     //Set messages to the scorer.
     scorer.addSettings("message", scoreMessageObject);
-
     return API.script;
   }
-
   return iatExtension;
 });
