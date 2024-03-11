@@ -66,10 +66,8 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 	    { word: "Morgan" },
 	    { word: "Jasmine" },
 	    { word: "Kaitlyn" },
-	    { word: "Nicole" }
-		
-		
-      ],
+	    { word: "Nicole" }   
+   ],
       //Stimulus css
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
     },
