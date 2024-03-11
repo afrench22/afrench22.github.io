@@ -6,9 +6,9 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 
   return iatExtension({
     category1: {
- 	name: "Male", //Will appear in the data.
+ 	name: 'Male', //Will appear in the data.
       	title: {
-	  media: { word: "Male" }, //Name of the category presented in the task.
+	  media: { word: 'Male' }, //Name of the category presented in the task.
 	  css: { color: "#31940F", "font-size": "2em" }, //Style of the category title.
         height: 4, //Used to position the "Or" in the combined block.
       },
@@ -30,18 +30,15 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 	   { word: "Justin" },
 	   { word: "Austin" },
 	   { word: "Dylan" },
-	   { word: "Ethan" }, 
-	   { word: "Noah" },
-	   { word: "Nathan" },
-	   { word: "Cameron" }
+	   { word: "Ethan" }
 	],
       //Stimulus css (style)
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
     },
     category2: {
-	name: "Female", //Will appear in the data.
+	name: 'Female', //Will appear in the data.
       title: {
-	 media: { word: "Female" }, //Name of the category presented in the task.
+	 media: { word: 'Female' }, //Name of the category presented in the task.
 	 css: { color: "#31940F", "font-size": "2em" }, //Style of the category title.
         height: 4, //Used to position the "Or" in the combined block.
       },
@@ -63,10 +60,7 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 	    { word: "Megan" },
 	    { word: "Sydney" },
 	    { word: "Destiny" },
-	    { word: "Morgan" },
-	    { word: "Jasmine" },
-	    { word: "Kaitlyn" },
-	    { word: "Nicole" }   
+	    { word: "Morgan" }  
    ],
       //Stimulus css
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
