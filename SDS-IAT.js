@@ -37,4 +37,3 @@
       image: "https://afrench22.github.io/images/",
     },
   });
-});
