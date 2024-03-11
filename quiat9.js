@@ -10,7 +10,8 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 	 * @return {Object}         PIP script
 	**/
 	
-  function iatExtension(options) {
+  function iatExtension(options) 
+  {
     var API = new APIConstructor();
     var scorer = new Scorer();
     var piCurrent = API.getCurrent();
