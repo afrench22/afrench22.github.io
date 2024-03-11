@@ -47,7 +47,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
           { word: "Nick" }
         ],
         //Stimulus css (style)
-        stimulusCss: { color: "#336600", "font-size": "2.3em" },
+        stimulusCss: { color: "#336600", "font-size": "2.3em" }
       },
       category2: {
         name: "Female", //Will appear in the data and in the default feedback message.
@@ -64,7 +64,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
           { word: "Ashley" }
         ],
         //Stimulus css
-        stimulusCss: { color: "#336600", "font-size": "2.3em" },
+        stimulusCss: { color: "#336600", "font-size": "2.3em" }
       },
 	attribute2: {
          name: "Sexually Passive", //Will appear in the data and in the default feedback message.
@@ -81,7 +81,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
           { word: "Naive" }
         ],
         //Stimulus css (style)
-        stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
+        stimulusCss: { color: "#0000FF", "font-size": "2.3em" }
 	},		
 	attribute1: {
          name: "Sexually Active", //Will appear in the data and in the default feedback message.
