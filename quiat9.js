@@ -20,7 +20,8 @@ define(["pipAPI", "pipScorer", "underscore"], function (
     //Here we set the settings of our task.
     //Read the comments to learn what each parameters means.
     //You can also do that from the outside, with a dedicated jsp file.
-    var iatObj = {
+    var iatObj = 
+    {
       	    fullscreen: false, //Should we show the task in full screen? A Qualtrics-only feature because in the usual Minno, we can go full-screen right at the beginning of the study.
       
 	    isTouch: false, //Set whether the task is on a touch device.
