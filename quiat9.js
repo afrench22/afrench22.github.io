@@ -96,6 +96,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
           { word: "Seducer" },
           { word: "Vulgar" },
           { word: "Explicit" }
+	],
         //Stimulus css (style)
         stimulusCss: { color: "#336600", "font-size": "2.3em" }
       },
