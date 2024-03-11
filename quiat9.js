@@ -146,7 +146,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 					{word: "monogamous" },
 					{word: "platonic" },
 					{word: "virtuous" },
-					{word: "indirect" },
+					{word: "indirect" }
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
