@@ -17,7 +17,23 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 	   { word: "Michael" },
            { word: "Matthew" },
            { word: "Josh" }, 
-	   { word: "Chris"}
+	   { word: "Chris"},
+	   { word: "Jacob" },
+	   { word: "Nick" },
+	   { word: "Andrew" },
+	   { word: "Daniel" },
+	   { word: "Tyler" },
+	   { word: "Brandon" },
+	   { word: "Ryan" },
+	   { word: "John" },
+	   { word: "Zach" },
+	   { word: "Justin" },
+	   { word: "Austin" },
+	   { word: "Dylan" },
+	   { word: "Ethan" }, 
+	   { word: "Noah" },
+	   { word: "Nathan" },
+	   { word: "Cameron" }
 	],
       //Stimulus css (style)
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
@@ -34,7 +50,25 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 	    { word: "Emily" },
             { word: "Hannah" },
             { word: "Madison" },
-	    { word: "Ashley" }
+	    { word: "Ashley" },
+	    { word: "Sarah" },
+	    { word: "Alexis" },
+	    { word: "Samantha" },
+	    { word: "Elizabeth" },
+	    { word: "Lauren" },
+	    { word: "Alyssa" },
+	    { word: "Kayla" },
+	    { word: Abigail" },
+	    { word: "Olivia" },
+	    { word: "Megan" },
+	    { word: "Sydney" },
+	    { word: "Destiny" },
+	    { word: "Morgan" },
+	    { word: "Jasmine" },
+	    { word: "Kaitlyn" },
+	    { word: "Nicole" }
+		
+		
       ],
       //Stimulus css
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
