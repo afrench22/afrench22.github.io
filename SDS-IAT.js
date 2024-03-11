@@ -6,28 +6,26 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 
   return iatExtension({
     category1: {
-      name: "Sexually Active", //Will appear in the data.
+      name: "Male", //Will appear in the data.
       title: {
-        media: { word: "Sexually Active" }, //Name of the category presented in the task.
+        media: { word: "Male" }, //Name of the category presented in the task.
         css: { color: "#31940F", "font-size": "2em" }, //Style of the category title.
         height: 4, //Used to position the "Or" in the combined block.
       },
       stimulusMedia: [
         //Stimuli content as PIP's media objects
-        { word: "Jacob" },
         { word: "Michael" },
         { word: "Matthew" },
         { word: "Josh" },
-        { word: "Chris" },
-        { word: "Nick" },
+        { word: "Chris" }
       ],
       //Stimulus css (style)
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
     },
     category2: {
-      name: "Sexually Passive", //Will appear in the data.
+      name: "Female", //Will appear in the data.
       title: {
-        media: { word: "Sexually Passive" }, //Name of the category presented in the task.
+        media: { word: "Female" }, //Name of the category presented in the task.
         css: { color: "#31940F", "font-size": "2em" }, //Style of the category title.
         height: 4, //Used to position the "Or" in the combined block.
       },
@@ -36,14 +34,44 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
         { word: "Emily" },
         { word: "Hannah" },
         { word: "Madison" },
-        { word: "Ashley" },
-        { word: "Sarah" },
-        { word: "Alexis" },
+        { word: "Ashley" }
       ],
       //Stimulus css
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
     },
-
+    attribute2: {
+         name: "Sexually Passive", //Will appear in the data and in the default feedback message.
+         title: {
+          media: { word: "Sexually Passive" }, //Name of the category presented in the task.
+          css: { color: "#0000FF", "font-size": "2.3em" }, //Style of the category title.
+          height: 4, //Used to position the "Or" in the combined block.
+        },
+        stimulusMedia: [
+          //Stimuli content as PIP's media objects
+          { word: "Prude" },
+          { word: "Innocent" },
+          { word: "Modest" },
+          { word: "Naive" }
+        ],
+        //Stimulus css (style)
+        stimulusCss: { color: "#0000FF", "font-size": "2.3em" },
+	},		
+	attribute1: {
+         name: "Sexually Active", //Will appear in the data and in the default feedback message.
+         title: {
+          media: { word: "Sexually Active" }, //Name of the category presented in the task.
+          css: { color: "#0000FF", "font-size": "2.3em" }, //Style of the category title.
+          height: 4, //Used to position the "Or" in the combined block.
+        },
+        stimulusMedia: [
+          //Stimuli content as PIP's media objects
+          { word: "Dominant" },
+          { word: "Seducer" },
+          { word: "Vulgar" },
+          { word: "Explicit" }
+        //Stimulus css (style)
+        stimulusCss: { color: "#336600", "font-size": "2.3em" }
+      },
     base_url: {
       //Where are your images at?
       image: "https://afrench22.github.io/images/",
