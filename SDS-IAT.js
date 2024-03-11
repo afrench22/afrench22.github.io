@@ -1,39 +1,92 @@
- return iatExtension({
+define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
+  APIConstructor,
+  iatExtension,
+) {
+  var API = new APIConstructor();
+  return iatExtension({
     category1: {
-      name: "Male", //Will appear in the data.
-      name: "Sexually Active", //Will appear in the data.
+      name: "Black people", //Will appear in the data.
       title: {
-        media: { word: "Male" }, //Name of the category presented in the task.
-        media: { word: "Sexually Active" }, //Name of the category presented in the task.
-        css: { color: "#31940F", "font-size": "2em" }, //Style of the category title.
-        height: 4, //Used to position the "Or" in the combined block.
-      },
-@@ -25,9 +25,9 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
-      stimulusCss: { color: "#31940F", "font-size": "1.8em" },
-    },
-    category2: {
-      name: "Female", //Will appear in the data.
-      name: "Sexually Passive", //Will appear in the data.
-      title: {
-        media: { word: "Female" }, //Name of the category presented in the task.
-        media: { word: "Sexually Passive" }, //Name of the category presented in the task.
+        media: { word: "Black people" }, //Name of the category presented in the task.
         css: { color: "#31940F", "font-size": "2em" }, //Style of the category title.
         height: 4, //Used to position the "Or" in the combined block.
       },
       stimulusMedia: [
         //Stimuli content as PIP's media objects
-        { word: "Emily" },
-        { word: "Hannah" },
-        { word: "Madison" },
-        { word: "Ashley" },
-        { word: "Sarah" },
-        { word: "Alexis" },
+        { image: "black1.jpg" },
+        { image: "black2.jpg" },
+        { image: "black3.jpg" },
+        { image: "black4.jpg" },
+        { image: "black5.jpg" },
+        { image: "black6.jpg" },
+      ],
+      //Stimulus css (style)
+      stimulusCss: { color: "#31940F", "font-size": "1.8em" },
+    },
+    category2: {
+      name: "White people", //Will appear in the data.
+      title: {
+        media: { word: "White people" }, //Name of the category presented in the task.
+        css: { color: "#31940F", "font-size": "2em" }, //Style of the category title.
+        height: 4, //Used to position the "Or" in the combined block.
+      },
+      stimulusMedia: [
+        //Stimuli content as PIP's media objects
+        { image: "yf1.jpg" },
+        { image: "yf4.jpg" },
+        { image: "yf5.jpg" },
+        { image: "ym2.jpg" },
+        { image: "ym3.jpg" },
+        { image: "ym5.jpg" },
       ],
       //Stimulus css
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
     },
+
+	return iatExtension({
+		category1 : {
+			name : 'Black people', //Will appear in the data.
+			title : {
+				media : {word : 'Black people'}, //Name of the category presented in the task.
+				css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
+				height : 4 //Used to position the "Or" in the combined block.
+			}, 
+			stimulusMedia : [ //Stimuli content as PIP's media objects
+    		    {image : 'black1.jpg'}, 
+    			{image : 'black2.jpg'}, 
+    			{image : 'black3.jpg'}, 
+    			{image : 'black4.jpg'}, 
+    			{image : 'black5.jpg'}, 
+    			{image : 'black6.jpg'}
+			], 
+			//Stimulus css (style)
+			stimulusCss : {color:'#31940F','font-size':'1.8em'}
+		},	
+		category2 :	{
+			name : 'White people', //Will appear in the data.
+			title : {
+				media : {word : 'White people'}, //Name of the category presented in the task.
+				css : {color:'#31940F','font-size':'2em'}, //Style of the category title.
+				height : 4 //Used to position the "Or" in the combined block.
+			}, 
+			stimulusMedia : [ //Stimuli content as PIP's media objects
+    		    {image : 'yf1.jpg'}, 
+    			{image : 'yf4.jpg'}, 
+    			{image : 'yf5.jpg'}, 
+    			{image : 'ym2.jpg'}, 
+    			{image : 'ym3.jpg'}, 
+    			{image : 'ym5.jpg'}			], 
+			//Stimulus css
+			stimulusCss : {color:'#31940F','font-size':'1.8em'}
+		},	
+
+		base_url : {//Where are your images at?
+			image : 'https://baranan.github.io/minno-tasks/images/'
+		} 
+	});
     base_url: {
       //Where are your images at?
-      image: "https://afrench22.github.io/images/",
+      image: "https://baranan.github.io/minno-tasks/images/",
     },
   });
+});
