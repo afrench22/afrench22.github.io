@@ -108,7 +108,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 					{word: "prude" },
 					{word: "good two shoes" },
 					{word: "docile" },
-					{word: "compliant }
+					{word: "compliant" }
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
