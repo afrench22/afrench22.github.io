@@ -38,7 +38,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 				name : 'Male', //Will appear in the data and in the default feedback message.
 				title : {
 					media : { word : 'Male' }, //Name of the category presented in the task.
-					css : { color:"#31940F", "font-size": "2em" }, //Style of the category title.
+					css : { color:"#336600", "font-size": "1.8em" }, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [//Stimuli content as PIP's media objects
@@ -61,13 +61,13 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 	   				   { word: "Ethan" }
 				],
 				//Stimulus css (style)
-				stimulusCss : {color:"#31940F","font-size": "1.8em" },
+				stimulusCss : {color:"#336600","font-size": "2.3em" },
 			},
 			category2: {
 				name : 'Female', //Will appear in the data and in the default feedback message.
 				title : {
 					media : {word : 'Female' }, //Name of the category presented in the task.
-					css : {color:"#31940F", "font-size": "2em" }, //Style of the category title.
+					css : {color:"#336600", "font-size": "1.8em" }, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
@@ -90,7 +90,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 	    				   { word: "Morgan" }
 				],
 				//Stimulus css
-				stimulusCss : {color: "#31940F","font-size": "1.8em" } ,
+				stimulusCss : {color: "#336600","font-size": "2.3em" } ,
 			},
 			attribute1 :
 			{
