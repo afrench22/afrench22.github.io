@@ -58,7 +58,7 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
 	    { word: "Lauren" },
 	    { word: "Alyssa" },
 	    { word: "Kayla" },
-	    { word: Abigail" },
+	    { word: "Abigail" },
 	    { word: "Olivia" },
 	    { word: "Megan" },
 	    { word: "Sydney" },
