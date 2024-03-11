@@ -41,70 +41,112 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Jacob'},
-					{word: 'Michael'},
-					{word: 'Josh'},
-					{word: 'Nick'}
+					   { word: "Michael" },
+          				   { word: "Matthew" },
+           				   { word: "Josh" }, 
+	   				   { word: "Chris"},
+	                                   { word: "Jacob" },
+	 		                   { word: "Nick" },
+	                                   { word: "Andrew" },
+	   				   { word: "Daniel" },
+	  				   { word: "Tyler" },
+	   				   { word: "Brandon" },
+	   		                   { word: "Ryan" },
+	                                   { word: "John" },
+	  				   { word: "Zach" },
+	  				   { word: "Justin" },
+	   				   { word: "Austin" },
+	 				   { word: "Dylan" },
+	   				   { word: "Ethan" }
 				],
 				//Stimulus css (style)
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
 			},
 			category2: {
-				name : 'White people', //Will appear in the data and in the default feedback message.
+				name : 'Female', //Will appear in the data and in the default feedback message.
 				title : {
-					media : {word : 'White people'}, //Name of the category presented in the task.
+					media : {word : 'Female'}, //Name of the category presented in the task.
 					css : {color:'#336600','font-size':'1.8em'}, //Style of the category title.
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'Jake'},
-					{word: 'Connor'},
-					{word: 'Bradley'},
-					{word: 'Allison'},
-					{word: 'Emma'},
-					{word: 'Emily'}
+					   { word: "Emily" },
+            				   { word: "Hannah" },
+            				   { word: "Madison" },
+	    				   { word: "Ashley" },
+	    				   { word: "Sarah" },
+	    				   { word: "Alexis" },
+	    				   { word: "Samantha" },
+	   				   { word: "Elizabeth" },
+	    				   { word: "Lauren" },
+	    				   { word: "Alyssa" },
+	    				   { word: "Kayla" },
+	   				   { word: Abigail" },
+	                                   { word: "Olivia" },
+	                                   { word: "Megan" },
+	    			           { word: "Sydney" },
+	   				   { word: "Destiny" },
+	    				   { word: "Morgan" }
 				],
 				//Stimulus css
 				stimulusCss : {color:'#336600','font-size':'2.3em'}
 			},
 			attribute1 :
 			{
-				name : 'Bad words',
+				name : 'Sexually Active',
 				title : {
-					media : {word : 'Bad words'},
+					media : {word : 'Sexually Active'},
 					css : {color:'#0000FF','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'awful'},
-					{word: 'failure'},
-					{word: 'agony'},
-					{word: 'hurt'},
-					{word: 'horrible'},
-					{word: 'terrible'},
-					{word: 'nasty'},
-					{word: 'evil'}
+					{word: "promiscious"},
+					{word: "dominant" },
+					{word: "seducer"},
+					{word: "daring" },
+					{word: "experienced"},
+					{word: "horny"},
+					{word: "arroused"},
+					{word: "errotic"},
+					{word: "exhibitionist"},
+					{word: "hedonism" }, 
+					{word: "fornicate" },
+					{word: "vulgar" },
+					{word: "spicy" },
+					{word: "explicit" },
+					{word: "lustful" },
+					{word: "risque" },
+					{word: "raunchy" }
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
 			},
 			attribute2 :
 			{
-				name : 'Good words',
+				name : 'Sexually Passive',
 				title : {
-					media : {word : 'Good words'},
+					media : {word : 'Sexually Passive'},
 					css : {color:'#0000FF','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
 				stimulusMedia : [ //Stimuli content as PIP's media objects
-					{word: 'laughter'},
-					{word: 'happy'},
-					{word: 'glorious'},
-					{word: 'joy'},
-					{word: 'wonderful'},
-					{word: 'peace'},
-					{word: 'pleasure'},
-					{word: 'love'}
+					{word: "submissive" },
+					{word: "innocent" },
+					{word: "reserved" },
+					{word: "modest" },
+					{word: "prude" },
+					{word: "good two shoes" },
+					{word: "docile" },
+					{word: "compliant },
+					{word: "wholesome" },
+					{word: "virgin" },
+					{word: "naive" },
+					{word: "abstinent" },
+					{word: "pure" },
+					{word: "monogamous" },
+					{word: "platonic" },
+					{word: "virtuous" },
+					{word: "indirect" },
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
