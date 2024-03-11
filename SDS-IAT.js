@@ -44,4 +44,3 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
       image: "https://afrench22.github.io/images/",
     },
   });
-});
