@@ -47,18 +47,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
            				   { word: "Josh" }, 
 	   				   { word: "Chris"},
 	                                   { word: "Jacob" },
-	 		                   { word: "Nick" },
-	                                   { word: "Andrew" },
-	   				   { word: "Daniel" },
-	  				   { word: "Tyler" },
-	   				   { word: "Brandon" },
-	   		                   { word: "Ryan" },
-	                                   { word: "John" },
-	  				   { word: "Zach" },
-	  				   { word: "Justin" },
-	   				   { word: "Austin" },
-	 				   { word: "Dylan" },
-	   				   { word: "Ethan" }
+					   { word: "John" }
 				],
 				//Stimulus css (style)
 				stimulusCss : {color:"#336600","font-size": "2.3em" },
@@ -76,18 +65,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
             				   { word: "Madison" },
 	    				   { word: "Ashley" },
 	    				   { word: "Sarah" },
-	    				   { word: "Alexis" },
-	    				   { word: "Samantha" },
-	   				   { word: "Elizabeth" },
-	    				   { word: "Lauren" },
-	    				   { word: "Alyssa" },
-	    				   { word: "Kayla" },
-	   				   { word: "Abigail" },
-	                                   { word: "Olivia" },
-	                                   { word: "Megan" },
-	    			           { word: "Sydney" },
-	   				   { word: "Destiny" },
-	    				   { word: "Morgan" }
+	    				   { word: "Alexis" }
 				],
 				//Stimulus css
 				stimulusCss : {color: "#336600","font-size": "2.3em" } ,
@@ -108,16 +86,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 					{word: "experienced"},
 					{word: "horny"},
 					{word: "arroused"},
-					{word: "errotic"},
-					{word: "exhibitionist"},
-					{word: "hedonism" }, 
-					{word: "fornicate" },
-					{word: "vulgar" },
-					{word: "spicy" },
-					{word: "explicit" },
-					{word: "lustful" },
-					{word: "risque" },
-					{word: "raunchy" }
+					{word: "errotic"}
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
@@ -138,16 +107,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 					{word: "prude" },
 					{word: "good two shoes" },
 					{word: "docile" },
-					{word: "compliant },
-					{word: "wholesome" },
-					{word: "virgin" },
-					{word: "naive" },
-					{word: "abstinent" },
-					{word: "pure" },
-					{word: "monogamous" },
-					{word: "platonic" },
-					{word: "virtuous" },
-					{word: "indirect" }
+					{word: "compliant }
 				],
 				//Stimulus css
 				stimulusCss : {color:'#0000FF','font-size':'2.3em'}
