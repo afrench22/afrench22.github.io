@@ -39,6 +39,7 @@ define(["pipAPI", "https://afrench22.github.io/quiat9.js"], function (
       //Stimulus css
       stimulusCss: { color: "#31940F", "font-size": "1.8em" },
     },
+    
     base_url: {
       //Where are your images at?
       image: "https://afrench22.github.io/images/",
