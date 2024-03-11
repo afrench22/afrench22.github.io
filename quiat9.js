@@ -81,7 +81,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 	    				   { word: "Lauren" },
 	    				   { word: "Alyssa" },
 	    				   { word: "Kayla" },
-	   				   { word: Abigail" },
+	   				   { word: "Abigail" },
 	                                   { word: "Olivia" },
 	                                   { word: "Megan" },
 	    			           { word: "Sydney" },
