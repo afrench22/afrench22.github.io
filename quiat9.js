@@ -73,9 +73,9 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 			},
 			attribute1 :
 			{
-				name : 'Sexually Active',
+				name : 'Sexually Active (Assertive)',
 				title : {
-					media : {word : 'Sexually Active'},
+					media : {word : 'Sexually Active (Assertive)'},
 					css : {color:'#0000FF','font-size':'1.8em'},
 					height : 4 //Used to position the "Or" in the combined block.
 				},
@@ -85,7 +85,7 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 					{word: "seducer"},
 					{word: "daring" },
 					{word: "experienced"},
-					{word: "horny"},
+					{word: "lustful"},
 					{word: "arroused"},
 					{word: "errotic"}
 				],
@@ -106,8 +106,8 @@ define(["pipAPI", "pipScorer", "underscore"], function (
 					{word: "reserved" },
 					{word: "modest" },
 					{word: "prude" },
-					{word: "good two shoes" },
-					{word: "docile" },
+					{word: "naive" },
+					{word: "goody two shoes" },
 					{word: "compliant" }
 				],
 				//Stimulus css
